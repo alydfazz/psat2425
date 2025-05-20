@@ -49,12 +49,12 @@ Masuk ke Consol Home > EC2 > Security Groups > Create security group
 3. Konfigurasi:
    - DB instance identifier: `alyards`
    - Master Username: `admin`
-   Pilih self managed
+   - Credentials management: pilih `self managed`
    - Master password: `P4ssw0rd123`
    - Confirm master password: `P4ssw0rd123`
 4. Connectivity:
    - Public access: **No**
-   - VPC security group (firewall): choose existing
+   - VPC security group (firewall): pilih `Choose existing`
    - Existing VPC security groups: pilih `SG-ServerDB`
 5. Klik "Create Database"
 6. Setelah selesai, tunngu **endpoint RDS** muncul, contoh:  
@@ -67,11 +67,11 @@ Masuk ke Consol Home > EC2 > Security Groups > Create security group
 ### A. Launch EC2
 
 1. Buka EC2 > Instances > Launch Instance
-2. Name nya diisi bebas, misalnya  AlyaServer
-2. Pilih Quick Start: **Ubuntu**
+2. Name nya diisi bebas, misalnya  `AlyaServer`
+2. Quick Start: **Ubuntu**
 3. Instance type: `t2.nano`
-4. Key pair: pilih vockey
-5. Firewall (security groups) pilih selecting existing security group, lalu pilih SG-ServerWeb
+4. Key pair: pilih `vockey`
+5. Firewall (security groups) pilih `selecting existing security group`, lalu pilih `SG-ServerWeb`
 6. Klik **Advanced Details**, masukkan **User Data** di bawah
 
 ---
@@ -97,7 +97,7 @@ a2enmod ssl
 a2ensite default-ssl.conf
 systemctl reload apache2
 
-Untuk susunan file .env sebagai berikut:
+## Untuk susunan file .env sebagai berikut:
 DB_USER=....  (isi dengan user RDS)
 DB_PASS=....  (isi dengan password RDS)
 DB_NAME=....  (isi dengan nama database yang akan dibuat di RDS)
@@ -128,8 +128,8 @@ DB_HOST=....  (isi dengan Endpoint RDS)
 | Masalah                | Solusi                                                     |
 | ---------------------- | ---------------------------------------------------------- |
 | Aplikasi tidak tampil  | Ulangi launch instance, pastikan script User Data benar    |
-| Tidak bisa konek ke DB | Periksa pengaturan Security Group `ServerDB` dan `.env`    |
-| HTTPS error            | Pastikan sertifikat berhasil dibuat (lihat script di atas) |
+| Tidak bisa konek ke DB | Periksa pengaturan Security Group `SG-ServerDB` dan `.env` |
+| HTTPS error            | Pastikan konfigurasi sudah benar (lihat script di atas)    |
 
 ---
 
@@ -138,8 +138,7 @@ DB_HOST=....  (isi dengan Endpoint RDS)
 1. Screenshot halaman **Data Siswa** (`dashboard.php`) setelah mengisi data
 2. Sertakan:
    * Link GitHub
-   * Public IP EC2
-3. Upload ke Google Classroom
+3. Upload ke Link Google Form yang sudah disediakan
 
 ---
 
