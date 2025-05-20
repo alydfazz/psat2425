@@ -97,6 +97,8 @@ a2enmod ssl
 a2ensite default-ssl.conf
 systemctl reload apache2
 
+---
+
 ## Untuk susunan file .env sebagai berikut:
 DB_USER=....  (isi dengan user RDS)
 DB_PASS=....  (isi dengan password RDS)
