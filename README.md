@@ -101,7 +101,7 @@ systemctl reload apache2
 
 > Semua proses ini otomatis saat EC2 pertama kali diluncurkan. Tidak perlu SSH ke dalam server.
 
-#### Untuk susunan file .env sebagai berikut:
+Untuk susunan file .env sebagai berikut:
 ```file
 DB_USER=....  (isi dengan user RDS) > /var/www/html/.env
 DB_PASS=....  (isi dengan password RDS) >> /var/www/html/.env
