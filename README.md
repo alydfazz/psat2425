@@ -97,14 +97,15 @@ a2enmod ssl
 a2ensite default-ssl.conf
 systemctl reload apache2
 
+````
+
 ---
 
 ## Untuk susunan file .env sebagai berikut:
-DB_USER=....  (isi dengan user RDS)
-DB_PASS=....  (isi dengan password RDS)
-DB_NAME=....  (isi dengan nama database yang akan dibuat di RDS)
-DB_HOST=....  (isi dengan Endpoint RDS)
-````
+DB_USER=....  (isi dengan user RDS) > /var/www/html/.env
+DB_PASS=....  (isi dengan password RDS) >> /var/www/html/.env
+DB_NAME=....  (isi dengan nama database yang akan dibuat di RDS) >> /var/www/html/.env
+DB_HOST=....  (isi dengan Endpoint RDS) >> /var/www/html/.env
 
 > Semua proses ini otomatis saat EC2 pertama kali diluncurkan. Tidak perlu SSH ke dalam server.
 
