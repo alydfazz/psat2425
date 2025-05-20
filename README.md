@@ -103,13 +103,13 @@ systemctl reload apache2
 
 ---
 
----
-
-## Untuk susunan file .env sebagai berikut:
+* Untuk susunan file .env sebagai berikut:
+```
 DB_USER=....  (isi dengan user RDS) > /var/www/html/.env
 DB_PASS=....  (isi dengan password RDS) >> /var/www/html/.env
 DB_NAME=....  (isi dengan nama database yang akan dibuat di RDS) >> /var/www/html/.env
 DB_HOST=....  (isi dengan Endpoint RDS) >> /var/www/html/.env
+````
 
 ## 4. Verifikasi Aplikasi
 
