@@ -112,8 +112,8 @@ DB_HOST=....  (isi dengan Endpoint RDS) >> /var/www/html/.env
 ## 4. Verifikasi Aplikasi
 
 * Akses melalui:
-  `https://[Public-IP-EC2]`
-* Klik lanjut jika muncul peringatan HTTPS self-signed
+  `https://[IP-Public-EC2]`
+* Klik `Advanced` > `Proceed to [IP-Public-EC2] (unsafe)` jika muncul peringatan HTTPS self-signed
 
 ---
 
